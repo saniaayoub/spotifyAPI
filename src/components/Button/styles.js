@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         fontSize: Metrix.FontRegular
     },
     standardView: {
-        width: Metrix.HorizontalSize(280),
+        width: Metrix.HorizontalSize(341),
         height: Metrix.VerticalSize(50),
         backgroundColor: Colors.Button,
         justifyContent: "center",

@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <View style={{flex: 1, backgroundColor: Colors.Secondary}}>
-        <StatusBar backgroundColor={Colors.Primary} barStyle="light-content" />
+        <StatusBar backgroundColor={Colors.Major} barStyle="light-content" />
         {/* <Loader /> */}
         <Route />
         {/* <ToastComponent /> */}

@@ -101,7 +101,8 @@ class SignIn extends Component {
               disabled={this.props.loading}
               onPress={this.signin}
               textStyle={{fontSize: Metrix.FontMedium}}
-              containerStyle={{marginTop: Metrix.VerticalSize(35)}}
+              containerStyle={{marginTop: Metrix.VerticalSize(35), width: Metrix.HorizontalSize(280),
+        height: Metrix.VerticalSize(50),}}
             />
           </View>
         </ScrollView>

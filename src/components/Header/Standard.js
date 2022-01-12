@@ -26,7 +26,7 @@ const Standard = ({
 
     <TouchableOpacity onPress={onPressRight} style={styles.iconView}>
       {rightIconComp || rightIconName ? (
-        <Icon name={rightIconName} color={Colors.Text} size={26} />
+        <Icon name={rightIconName} color={Colors.Major} size={26} />
       ) : (
         <View style={styles.dummyView} />
       )}

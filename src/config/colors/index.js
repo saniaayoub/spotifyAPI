@@ -4,7 +4,7 @@ const Colors = {
   Transparent: 'transparent',
   Primary: '#d94826',
   Secondary: '#ffffff',
-  DarkGray: '#1E1E22',
+  Black: '#000000',
   White: '#ffffff',
   Text: '#1E1E22',
   Danger: '#FF494C',

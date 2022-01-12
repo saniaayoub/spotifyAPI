@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: Metrix.HorizontalSize(10),
         width: "100%",
         flexDirection: "row",
-        backgroundColor: Colors.DarkGray,
+        backgroundColor: Colors.White,
         justifyContent: "space-between",
         alignItems: "center",
         height: Metrix.VerticalSize(70)
