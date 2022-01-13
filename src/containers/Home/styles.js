@@ -5,9 +5,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  background: {
-    // paddingBottom: Metrix.VerticalSize(70),
-  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -44,7 +41,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.Major,
     marginTop: -Metrix.VerticalSize(50),
     marginHorizontal: Metrix.HorizontalSize(30),
-    // width: Metrix.HorizontalSize(300),
     height: Metrix.VerticalSize(150),
     borderRadius: Metrix.VerticalSize(50),
   },
@@ -52,6 +48,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  status: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    backgroundColor: Colors.White,
+    paddingVertical: Metrix.VerticalSize(40),
+    borderRadius: Metrix.VerticalSize(50),
   },
   textWhite: {
     color: Colors.White,
@@ -65,6 +69,19 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.White,
     //   marginHorizontal: Metrix.HorizontalSize(10)
   },
+  buttonView: {
+    justifyContent: 'space-evenly',
+    paddingVertical: Metrix.VerticalSize(0)
+  },
+  button: {
+    width: Metrix.HorizontalSize(130),
+    height: Metrix.VerticalSize(70),
+    paddingHorizontal: Metrix.HorizontalSize(20),
+    paddingVertical: Metrix.VerticalSize(10),
+    borderRadius: Metrix.LightRadius,
+    backgroundColor: Colors.Grey,
+  },
+
 });
 
 export default styles;

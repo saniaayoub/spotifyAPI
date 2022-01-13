@@ -6,6 +6,7 @@ const Colors = {
   Secondary: '#ffffff',
   Black: '#000000',
   White: '#ffffff',
+  Grey: '#D3D3D3',
   Text: '#1E1E22',
   Danger: '#FF494C',
   Success: '#22bb33',

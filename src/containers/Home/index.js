@@ -39,7 +39,6 @@ class Home extends Component {
           source={Images.background}
           resizeMode="cover"
           style={styles.background}>
-          
           {/* Header */}
           <View style={styles.header}>
             <Text style={styles.Heading}> Empleado </Text>
@@ -51,8 +50,7 @@ class Home extends Component {
             <Image
               source={Images.profile}
               resizeMode="cover"
-              style={styles.image}>
-              </Image>
+              style={styles.image}></Image>
           </View>
 
           {/* Header Text */}
@@ -64,7 +62,6 @@ class Home extends Component {
 
           {/* White Container */}
           <View style={styles.bottomContainer}>
-            
             {/*Inner Blue Container  */}
             <View style={styles.empContainer}>
               <View style={styles.centerView}>
@@ -78,48 +75,70 @@ class Home extends Component {
                 </Text>
                 <Text style={styles.textWhite}> Empleado Id </Text>
               </View>
-              <View
-                style={[styles.verticalLine]}
-              />
+              <View style={[styles.verticalLine]} />
               <View style={styles.centerView}>
                 <Text
                   style={[
                     styles.textWhite,
                     {fontSize: Metrix.FontMedium, fontWeight: 'bold'},
                   ]}>
-                  Working Policy </Text>
+                  Working Policy{' '}
+                </Text>
                 <Text style={styles.textWhite}> March'21-new Policy </Text>
                 <Text style={styles.textWhite}> 09:30 am - 06:00 pm </Text>
               </View>
             </View>
-            <View>
-              <View>
-                <View style={styles.centerView}>
-                <Text
-                  style={[
-                    styles.textBlack,
-                    {fontSize: Metrix.FontLarge, fontWeight: 'bold'},
-                  ]}>
+
+            {/* status */}
+            <View style={styles.status}>
+              <View style={styles.centerView}>
+                <Text style={styles.textBlack}>Current Status</Text>
+                <Text style={[styles.textBlack, {fontWeight: 'bold'}]}>
                   {' '}
-                  9105904{' '}
+                  Signed in{' '}
                 </Text>
-                <Text style={styles.textWhite}> Empleado Id </Text>
               </View>
               <View
-                style={[styles.verticalLine]}
+                style={[styles.verticalLine, {backgroundColor: Colors.Black}]}
               />
               <View style={styles.centerView}>
-                <Text
-                  style={[
-                    styles.textWhite,
-                    {fontSize: Metrix.FontMedium, fontWeight: 'bold'},
-                  ]}>
-                  Working Policy </Text>
-                <Text style={styles.textWhite}> March'21-new Policy </Text>
-                <Text style={styles.textWhite}> 09:30 am - 06:00 pm </Text>
+                <Text style={[styles.textBlack]}>Working Status </Text>
+                <Text style={[styles.textBlack, {fontWeight: 'bold'}]}>
+                  {' '}
+                  Duty Time{' '}
+                </Text>
               </View>
+              <View
+                style={[styles.verticalLine, {backgroundColor: Colors.Black}]}
+              />
+
+              <View style={styles.centerView}>
+                <Text style={[styles.textBlack, ,]}>Login Time</Text>
+                <Text style={[styles.textBlack, {fontWeight: 'bold'}]}>
+                  {' '}
+                  09:42 am{' '}
+                </Text>
               </View>
-              
+            </View>
+
+            {/* Buttons */}
+            <View style={[styles.status, styles.buttonView]}>
+              <Button.Standard
+                text={'Last 30 Days'}
+                containerStyle={styles.button}
+                textStyle={{ color: Colors.Text }}></Button.Standard>
+              <Button.Standard
+                text={'Signout'}
+                containerStyle={[styles.button, {backgroundColor: 'yellow'}]}
+                textStyle={{color: Colors.Text, fontSize: Metrix.FontMedium}}></Button.Standard>
+            </View>
+
+            {/* Attendance Graph */}
+            <View>
+              <View>
+                <Text> Attendance </Text>
+                
+              </View>
             </View>
           </View>
         </ImageBackground>
