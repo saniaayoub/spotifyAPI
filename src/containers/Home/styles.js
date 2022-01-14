@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     color: Colors.White,
   },
   textBlack: {
-    color: Colors.Black
+    color: Colors.Black,
   },
   verticalLine: {
     width: 1,
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   buttonView: {
     justifyContent: 'space-evenly',
-    paddingVertical: Metrix.VerticalSize(0)
+    paddingVertical: Metrix.VerticalSize(0),
   },
   button: {
     width: Metrix.HorizontalSize(130),
@@ -81,7 +81,24 @@ const styles = StyleSheet.create({
     borderRadius: Metrix.LightRadius,
     backgroundColor: Colors.Grey,
   },
-
+  attendanceView: {
+    flexDirection: 'column',
+    backgroundColor: Colors.Grey,
+    marginHorizontal: Metrix.HorizontalSize(20),
+    marginVertical: Metrix.VerticalSize(40),
+    padding: Metrix.VerticalSize(20),
+    borderRadius: Metrix.fullRadius,
+  },
+  datePicker: {
+    backgroundColor: Metrix.Transparent,
+    borderRadius: Metrix.Radius,
+    borderColor: Metrix.Black,
+    borderWidth: 1,
+    paddingVertical: Metrix.VerticalSize(0),
+    justifyContent: 'space-between',
+    paddingHorizontal: Metrix.HorizontalSize(10),
+    width: Metrix.HorizontalSize(200)
+  },
 });
 
 export default styles;
