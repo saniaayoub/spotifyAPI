@@ -99,6 +99,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: Metrix.HorizontalSize(10),
     width: Metrix.HorizontalSize(200)
   },
+   MainContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 export default styles;

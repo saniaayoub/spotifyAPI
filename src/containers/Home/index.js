@@ -5,7 +5,7 @@ import {
   ScrollView,
   ImageBackground,
   Image,
-  TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 import {connect} from 'react-redux';
 import {Button, IconComp} from '../../components';
@@ -16,8 +16,9 @@ import MonthPicker from 'react-native-month-year-picker';
 import {useState, useCallback} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Moment from 'react-moment';
+import BarGraph from '../../components/Graphs/BarGraph';
 
-const Home = () => {
+const Home = props => {
   const [date, setDate] = useState(new Date());
   const [show, setShow] = useState(false);
 
@@ -129,6 +130,7 @@ const Home = () => {
             <Button.Standard
               text={'Signout'}
               containerStyle={[styles.button, {backgroundColor: 'yellow'}]}
+              onPress={() => props.Logout()}
               textStyle={{
                 color: Colors.Text,
                 fontSize: Metrix.FontMedium,
@@ -137,8 +139,15 @@ const Home = () => {
 
           {/* Attendance Graph */}
           <View style={styles.attendanceView}>
-            <View style={[styles.status, { backgroundColor: Metrix.Transparent, paddingVertical: 0 }]}>
-              <Text style={ {fontWeight: 'bold', fontSize: Metrix.FontLarge}}> Attendance </Text>
+            <View
+              style={[
+                styles.status,
+                {backgroundColor: Metrix.Transparent, paddingVertical: 0},
+              ]}>
+              <Text style={{fontWeight: 'bold', fontSize: Metrix.FontLarge}}>
+                {' '}
+                Attendance{' '}
+              </Text>
               <View style={[styles.status, styles.datePicker]}>
                 <Moment element={Text} format="MMMM - YYYY">
                   {date}
@@ -160,7 +169,9 @@ const Home = () => {
                 )}
               </View>
             </View>
+             <BarGraph/>
           </View>
+         
         </View>
       </ImageBackground>
     </ScrollView>
