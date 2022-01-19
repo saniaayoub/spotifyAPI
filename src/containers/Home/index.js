@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  ScrollView,
-  ImageBackground,
-  Image,
-  Dimensions,
-} from 'react-native';
+import {View, Text, ScrollView, ImageBackground, Image} from 'react-native';
 import {connect} from 'react-redux';
 import {Button, IconComp} from '../../components';
 import {AppAction} from '../../store/actions';
@@ -17,6 +10,9 @@ import {useState, useCallback} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Moment from 'react-moment';
 import BarGraph from '../../components/Graphs/BarGraph';
+import Bluebox from '../../components/AppComps/bluebox';
+import ScrnButtons from '../../components/AppComps/scrnButtons';
+
 
 const Home = props => {
   const [date, setDate] = useState(new Date());
@@ -35,9 +31,7 @@ const Home = props => {
   );
   return (
     <ScrollView style={styles.container}>
-      <ImageBackground
-        source={Images.background}
-        resizeMode="cover"
+      <View
         style={styles.background}>
         {/* Header */}
         <View style={styles.header}>
@@ -169,11 +163,74 @@ const Home = props => {
                 )}
               </View>
             </View>
-             <BarGraph/>
+            <BarGraph />
           </View>
-         
+
+          {/* Buttons */}
+          <View style={[styles.status, {paddingVertical: 0}]}>
+            <Button.Standard
+              text={'Applications'}
+              containerStyle={{
+                backgroundColor: Colors.Grey,
+                width: Metrix.HorizontalSize(110),
+              }}
+            />
+            <Button.Standard
+              text={'Time Adjustment'}
+              containerStyle={{
+                backgroundColor: Colors.Grey,
+                width: Metrix.HorizontalSize(120),
+                paddingHorizontal: Metrix.HorizontalSize(10),
+              }}
+            />
+            <Button.Standard
+              text={'View Details'}
+              containerStyle={{
+                backgroundColor: Colors.Grey,
+                width: Metrix.HorizontalSize(110),
+              }}
+            />
+          </View>
+
+          {/* four box */}
+          <View style={styles.columnView}>
+            <View
+              style={[
+                styles.rowView,
+                {marginBottom: Metrix.HorizontalSize(30)},
+              ]}>
+              <Bluebox count={51} text1={'Earned'} text2={'Hours'} />
+              <View
+                style={[styles.verticalLine, {backgroundColor: Colors.Black}]}
+              />
+              <View style={styles.rowView}>
+                <Bluebox count={13} text1={'Total'} text2={'Absents'} />
+              </View>
+            </View>
+            <View style={styles.rowView}>
+              <View style={styles.rowView}>
+                <Bluebox count={200} text1={'Allowed'} text2={'Late Min'} />
+              </View>
+              <View
+                style={[styles.verticalLine, {backgroundColor: Colors.Black}]}
+              />
+              <View style={styles.rowView}>
+                <Bluebox count={0} text1={'Used'} text2={'Late Min'} />
+              </View>
+            </View>
+          </View>
+
+          {/* Screen Navigation Buttons */}
+          <View style={styles.columnView}>
+            <ScrnButtons iconName={'tasks'} text={'Tasks'} color={Colors.Major}/>
+            <ScrnButtons iconName={'bullhorn'} text={'Notices'} color={Colors.Major}/>
+            <ScrnButtons iconName={'file-invoice-dollar'} text={'Payroll'} color={Colors.Major}/>
+            <ScrnButtons iconName={'tablet-alt'} text={'Application Type'} color={Colors.Major}/>
+            <ScrnButtons iconName={'adjust'} text={'Adjustment Requests'} color={Colors.Major}/>
+            <ScrnButtons iconName={'id-card'} text={'Attendance'} color={Colors.Major}/>
+          </View>
         </View>
-      </ImageBackground>
+      </View>
     </ScrollView>
   );
 };

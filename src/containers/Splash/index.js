@@ -25,7 +25,7 @@ const Splash = () => {
         if (user) {
           const parsedData = JSON.parse(user);
           dispatch(AppAction.SignInSuccess(parsedData));
-          NavigationService.replace('Home');
+          NavigationService.replace('Notices');
         } else {
           NavigationService.replace('SignIn');
         }
@@ -43,7 +43,7 @@ const Splash = () => {
   )
 }
 
-export default Splash;
+export default React.memo(Splash);
 
 
 

@@ -20,28 +20,33 @@ const data = [
 ];
 const BarGraph = () => {
   return (
-    <View style={styles.container}>
-      <Text style={{transform: [{ rotate: '-90deg' }]}}>Hours</Text>
-      <VictoryChart
-        maxDomain={{x: 30, y: 12}}
-        width={Metrix.HorizontalSize(350)}
-        theme={VictoryTheme.material}>
+    <>
+      <View style={styles.container}>
+        <Text style={{transform: [{rotate: '-90deg'}], marginLeft: 20}}>Hours</Text>
+        <VictoryChart
+          maxDomain={{x: 30, y: 12}}
+          width={Metrix.HorizontalSize(350)}
+          theme={VictoryTheme.material}>
+          <VictoryBar
+            barWidth={5}
+            data={data}
+            x="monthDay"
+            y="Hours"
+            animate={{
+              duration: 2000,
+              onLoad: {duration: 1000},
+            }}
+            cornerRadius={{topLeft: 5, topRight: 5}}
+            style={{data: {fill: Colors.Major}}}
+          />
+        </VictoryChart>
         
-        <VictoryBar
-          barWidth={5}
-          data={data}
-          x="monthDay"
-          y="Hours"
-          animate={{
-            duration: 2000,
-            onLoad: {duration: 1000},
-          }}
-          cornerRadius={{ topLeft: 5, topRight: 5 }}
-          style={{ data: { fill: Colors.Major } }}
-        />
-      </VictoryChart>
-      <Text> Month Days</Text>
-    </View>
+      </View>
+      <View style={styles.label}>
+        <Text> Month Days </Text>
+
+      </View>
+          </>
   );
 };
 
@@ -51,8 +56,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     backgroundColor: Colors.Transparent,
   },
+  label: {
+    marginTop: -10,
+    justifyContent:"center",
+    alignItems:'center'
+  }
 });

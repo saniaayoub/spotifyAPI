@@ -5,6 +5,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  background: {
+    backgroundColor: Colors.Grey
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -103,7 +106,35 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  columnView: {
+    marginVertical: Metrix.VerticalSize(20),
+    flexDirection: 'column',
+    // alignItems: 'center',
+    justifyContent: 'space-around'
+  },
+  rowView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around'
+  },
+  blueBox: {
+    backgroundColor: Colors.Major,
+    width: Metrix.HorizontalSize(80),
+    height: Metrix.VerticalSize(80),
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: Metrix.Radius,
+  },
+  innerText: {
+    color: Colors.White,
+    fontSize: Metrix.FontLarge,
+    fontWeight: 'bold',
+  },
+  outerText: {
+    fontSize: Metrix.FontMedium,
   }
+
 });
 
 export default styles;

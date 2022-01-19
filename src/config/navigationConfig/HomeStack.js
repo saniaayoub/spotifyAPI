@@ -1,5 +1,5 @@
 import {
-    AddPost, Home
+    Notice, Home
 } from '../../containers'
 
 export const HomeStack = [
@@ -9,8 +9,8 @@ export const HomeStack = [
         key: 'Home',
     },
     {
-        name: 'AddPost',
-        component: AddPost,
-        key: 'AddPost',
+        name: 'Notices',
+        component: Notice,
+        key: 'Notice',
     }
 ]
