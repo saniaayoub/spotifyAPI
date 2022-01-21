@@ -6,11 +6,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: Metrix.HorizontalSize(10),
         width: "100%",
         flexDirection: "row",
-        backgroundColor: Colors.Grey,
+        // backgroundColor: Colors.Grey,
         justifyContent: "space-between",
         alignItems: "center",
         height: Metrix.VerticalSize(70),
-        elevation: 4
+        // elevation: 4
     },
     iconView: {
         paddingVertical: Metrix.HorizontalSize(10),
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         letterSpacing: 0.63,
         fontSize: Metrix.FontLarge,
         fontWeight:'bold',
-        // fontFamily: Fonts["Montserrat-SemiBold"],
+        fontFamily: Fonts["Montserrat-SemiBold"],
         color: Colors.Text
     },
     dummyView: {
