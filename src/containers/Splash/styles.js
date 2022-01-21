@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
         height: "100%",
     },
     logoContainer: {
-        
         margin: Metrix.VerticalSize(10),
         backgroundColor: Colors.Primary,
         justifyContent: 'center',

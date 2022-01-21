@@ -25,7 +25,7 @@ const Splash = () => {
         if (user) {
           const parsedData = JSON.parse(user);
           dispatch(AppAction.SignInSuccess(parsedData));
-          NavigationService.replace('Notices');
+          NavigationService.replace('Home');
         } else {
           NavigationService.replace('SignIn');
         }

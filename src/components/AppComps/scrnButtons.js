@@ -13,7 +13,7 @@ const ScrnButtons = (props) => {
                 </View>
                 <Text style={styles.text}>{ props.text }</Text>
             </View>
-                <Icon.Button name={'chevron-right'} color={Colors.Grey} size={26} backgroundColor={Colors.Transparent} />
+                <Icon.Button name={'chevron-right'} color={Colors.Grey} size={26} backgroundColor={Colors.Transparent} onPress={props.onPress}/>
            
         </View>
     )

@@ -9,7 +9,7 @@ export const HomeStack = [
         key: 'Home',
     },
     {
-        name: 'Notices',
+        name: 'Notice',
         component: Notice,
         key: 'Notice',
     }

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {Button, IconComp} from '../../components';
 import {AppAction} from '../../store/actions';
 import styles from './styles';
-import {Colors, Images, Metrix} from '../../config';
+import {Colors, Images, Metrix, NavigationService} from '../../config';
 import MonthPicker from 'react-native-month-year-picker';
 import {useState, useCallback} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -222,8 +222,8 @@ const Home = props => {
 
           {/* Screen Navigation Buttons */}
           <View style={styles.columnView}>
-            <ScrnButtons iconName={'tasks'} text={'Tasks'} color={Colors.Major}/>
-            <ScrnButtons iconName={'bullhorn'} text={'Notices'} color={Colors.Major}/>
+            <ScrnButtons iconName={'tasks'} text={'Tasks'} color={Colors.Major} />
+            <ScrnButtons iconName={'bullhorn'} text={'Notices'} color={Colors.Major} onPress={ () => NavigationService.navigate('Notice') }/>
             <ScrnButtons iconName={'file-invoice-dollar'} text={'Payroll'} color={Colors.Major}/>
             <ScrnButtons iconName={'tablet-alt'} text={'Application Type'} color={Colors.Major}/>
             <ScrnButtons iconName={'adjust'} text={'Adjustment Requests'} color={Colors.Major}/>
